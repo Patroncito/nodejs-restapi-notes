@@ -1,8 +1,7 @@
 import express from "express";
 import notesRouter from "./routes/notes.routes.js"
 import indexrouter from "./routes/index.routers.js"
-
-var cors = require('cors');
+import cors from "cors"
 
 const app = express()
 
