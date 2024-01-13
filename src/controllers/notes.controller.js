@@ -36,12 +36,12 @@ export const getNote = async (req,res) =>  {
 export const postNotes = async (req,res) => {
  
     try {
-        const {name, taskText} = req.body
-        const [rows] = await pool.query("INSERT INTO notes (name, tasktext) VALUES (?,?)", [name, taskText])
+        const {name, tasktext} = req.body
+        const [rows] = await pool.query("INSERT INTO notes (name, tasktext) VALUES (?,?)", [name, tasktext])
         res.send({
             id : rows.insertId,
             name,
-            taskText,
+            tasktext,
         })
     } catch (error) {
         res.status(500).json({
